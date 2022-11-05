@@ -64,6 +64,7 @@ function studentAge() {
 const ageOfRam = studentAge.bind(student);
 console.log(ageOfRam());    // 20
 
+// Currying is used to create more functions from a given function by pre-setting some arguments
 // Currying using Bind Method
 function bindMultiply(x, y) {
     console.log(x * y);
