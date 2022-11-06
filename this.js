@@ -142,8 +142,8 @@ console.log(pluto.placementEligibility(40)(20));    // false
 // To print the name of eligible students I will do the following:
 const students = [tom, jerry, dexter, jhonny, pluto];
 let studentsEligibleForPlacements = [];
-for(let key of students){
-    if(key.placementEligibility(40)(20)){
+for (let key of students) {
+    if (key.placementEligibility(40)(20)) {
         studentsEligibleForPlacements.push(key.name);
     }
 }
@@ -161,3 +161,20 @@ console.log(placementEligibility.call(jerry, 40)(25));  // false
 console.log(placementEligibility.call(dexter, 40)(25)); // false
 console.log(placementEligibility.call(jhonny, 40)(25)); // false
 console.log(placementEligibility.call(pluto, 40)(25));  // false */
+
+/* Arrow Functions, Arguements and Spread Operator */
+const x = function () {
+    console.log(arguments[1]);
+}
+x(1, 2, 3);   // 2
+// Doing the same thing using Arrow Function and Spread Operator
+/* NOTE: The thing below would not work
+const y = () => {
+    console.log(arguments[1]);
+}
+y(1, 2, 3); // ReferenceError: arguments is not defined at y */
+// You would have to use Spread Operator as shown below:
+const y = (...n) => {
+    console.log(n[1]);
+}
+y(1, 2, 3); // 2
